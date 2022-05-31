@@ -130,9 +130,9 @@ public class Frame2 extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Object[] options = {"Yes", "Hold on"};
-        String s = (String)JOption
         Component frame = null;
 int n = JOptionPane.showOptionDialog(frame,"Are you sure?", "Redirect", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
+        
     }//GEN-LAST:event_jButton1ActionPerformed
     private void toF1fromF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toF1fromF2ActionPerformed
         this.setVisible(false);
