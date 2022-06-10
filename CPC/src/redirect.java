@@ -1,3 +1,10 @@
+
+import java.awt.FlowLayout;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JProgressBar;
+import javax.swing.SwingUtilities;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -90,8 +97,38 @@ public class redirect extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        this.setVisible(false);
-        new progress().setVisible(true);
+    this.setVisible(false);
+        final int MAX = 100;
+        final JFrame frame = new JFrame("JProgress Demo");
+        
+        // create progress bar
+        final JProgressBar pb = new JProgressBar();
+            pb.setMinimum(0);
+            pb.setMaximum(MAX);
+            pb.setStringPainted(true);
+            
+        // add progress bar
+        frame.setLayout(new FlowLayout());
+        frame.getContentPane().add(pb);
+        
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setSize(300, 200);
+        frame.setVisible(true);
+        
+           // update progressbar
+        for (int i = 0; i <= MAX; i++) {
+            final int currentValue = i;
+            try {
+                SwingUtilities.invokeLater(new Runnable() {
+                    public void run() {
+                        pb.setValue(currentValue);
+                    }
+                });
+                java.lang.Thread.sleep(100);
+            } catch (InterruptedException e) {
+                JOptionPane.showMessageDialog(frame, e.getMessage());
+            }
+        }
         speedBump = 1;
     }//GEN-LAST:event_jButton1ActionPerformed
 
