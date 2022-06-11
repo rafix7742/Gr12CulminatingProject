@@ -18,6 +18,10 @@ public class Frame2 extends javax.swing.JFrame {
      * Creates new form Frame2
      */
     public Frame2() {
+        if(redirect.speedBump == 1){
+            this.setVisible(false);
+            new Frame3().setVisible(true);
+        }
         initComponents();
     }
 
@@ -31,14 +35,16 @@ public class Frame2 extends javax.swing.JFrame {
     private void initComponents() {
 
         Background = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
+        title = new javax.swing.JLabel();
+        f2Activate = new javax.swing.JButton();
+        liquidity = new javax.swing.JLabel();
+        profitability = new javax.swing.JLabel();
+        solvency = new javax.swing.JLabel();
+        name = new javax.swing.JLabel();
+        liqInput = new javax.swing.JTextField();
+        proInput = new javax.swing.JTextField();
+        solInput = new javax.swing.JTextField();
+        nameInput = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         toF1fromF2 = new javax.swing.JMenuItem();
@@ -51,43 +57,51 @@ public class Frame2 extends javax.swing.JFrame {
         Background.setBackground(new java.awt.Color(204, 204, 255));
         Background.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Felix Titling", 1, 48)); // NOI18N
-        jLabel1.setText("The functioning O_O");
-        Background.add(jLabel1);
-        jLabel1.setBounds(0, 0, 600, 70);
+        title.setFont(new java.awt.Font("Felix Titling", 1, 48)); // NOI18N
+        title.setText("The functioning O_O");
+        Background.add(title);
+        title.setBounds(0, 0, 600, 70);
 
-        jButton1.setText("jButton1");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        f2Activate.setText("OK");
+        f2Activate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                f2ActivateActionPerformed(evt);
             }
         });
-        Background.add(jButton1);
-        jButton1.setBounds(240, 240, 73, 30);
+        Background.add(f2Activate);
+        f2Activate.setBounds(270, 240, 47, 30);
 
-        jTextField1.setText("jTextField1");
-        Background.add(jTextField1);
-        jTextField1.setBounds(90, 70, 500, 30);
+        liquidity.setText("Liquidity");
+        Background.add(liquidity);
+        liquidity.setBounds(10, 70, 70, 30);
 
-        jLabel2.setText("Liquidity");
-        Background.add(jLabel2);
-        jLabel2.setBounds(10, 70, 70, 30);
+        profitability.setText("Profitability");
+        Background.add(profitability);
+        profitability.setBounds(10, 110, 70, 30);
 
-        jLabel3.setText("Profitability");
-        Background.add(jLabel3);
-        jLabel3.setBounds(10, 110, 70, 30);
+        solvency.setText("Solvency");
+        Background.add(solvency);
+        solvency.setBounds(10, 150, 70, 30);
 
-        jLabel4.setText("Solvency");
-        Background.add(jLabel4);
-        jLabel4.setBounds(10, 150, 70, 30);
+        name.setText("Company Name");
+        Background.add(name);
+        name.setBounds(10, 200, 80, 14);
 
-        jTextField2.setText("jTextField2");
-        Background.add(jTextField2);
-        jTextField2.setBounds(90, 110, 500, 30);
+        liqInput.setText("jTextField1");
+        Background.add(liqInput);
+        liqInput.setBounds(90, 70, 500, 30);
 
-        jTextField3.setText("jTextField3");
-        Background.add(jTextField3);
-        jTextField3.setBounds(90, 150, 500, 30);
+        proInput.setText("jTextField2");
+        Background.add(proInput);
+        proInput.setBounds(90, 110, 500, 30);
+
+        solInput.setText("jTextField3");
+        Background.add(solInput);
+        solInput.setBounds(90, 150, 500, 30);
+
+        nameInput.setText("jTextField4");
+        Background.add(nameInput);
+        nameInput.setBounds(90, 190, 500, 30);
 
         jMenu1.setText("Go to");
 
@@ -128,12 +142,10 @@ public class Frame2 extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Object[] options = {"Yes", "Hold on"};
-        String s = (String)JOption
-        Component frame = null;
-int n = JOptionPane.showOptionDialog(frame,"Are you sure?", "Redirect", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, options, options[1]);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void f2ActivateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f2ActivateActionPerformed
+      new redirect().setVisible(true);
+      this.setVisible(false);
+    }//GEN-LAST:event_f2ActivateActionPerformed
     private void toF1fromF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toF1fromF2ActionPerformed
         this.setVisible(false);
         new Frame1().setVisible(true);
@@ -181,18 +193,24 @@ int n = JOptionPane.showOptionDialog(frame,"Are you sure?", "Redirect", JOptionP
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JButton f2Activate;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField liqInput;
+    private javax.swing.JLabel liquidity;
+    private javax.swing.JLabel name;
+    private javax.swing.JTextField nameInput;
+    private javax.swing.JTextField proInput;
+    private javax.swing.JLabel profitability;
+    private javax.swing.JTextField solInput;
+    private javax.swing.JLabel solvency;
+    private javax.swing.JLabel title;
     private javax.swing.JMenuItem toF1fromF2;
     private javax.swing.JMenuItem toF3fromF3;
     // End of variables declaration//GEN-END:variables
+
+    private void setLabel(String string) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

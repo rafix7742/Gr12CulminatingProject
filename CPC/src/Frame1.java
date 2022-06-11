@@ -28,13 +28,16 @@ public class Frame1 extends javax.swing.JFrame {
 
         Background = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        nextFrame = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem1 = new javax.swing.JMenuItem();
         toF3fromF1 = new javax.swing.JMenuItem();
         exit = new javax.swing.JMenuItem();
+        jMenu2 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(600, 350));
@@ -43,23 +46,23 @@ public class Frame1 extends javax.swing.JFrame {
         Background.setBackground(new java.awt.Color(204, 255, 255));
         Background.setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Felix Titling", 1, 48)); // NOI18N
-        jLabel1.setText("L + RATIO CALC");
+        jLabel1.setFont(new java.awt.Font("Felix Titling", 1, 30)); // NOI18N
+        jLabel1.setText("Financial Health CALCULATOR");
         Background.add(jLabel1);
-        jLabel1.setBounds(90, 20, 420, 70);
+        jLabel1.setBounds(20, 20, 560, 70);
 
-        jButton1.setText("Next Frame");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        nextFrame.setText("Next Frame");
+        nextFrame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                nextFrameActionPerformed(evt);
             }
         });
-        Background.add(jButton1);
-        jButton1.setBounds(240, 80, 110, 23);
+        Background.add(nextFrame);
+        nextFrame.setBounds(240, 80, 110, 23);
 
-        jLabel2.setText("About the project:");
+        jLabel2.setText("<html><style> c {font-size: 20px;}</style><div><b>An <c>important</c> tool for the <c>everyday accountant!</c> That could be <c>you!</c> The three things you'd <c>HATE</c> to memorize, are now <c>EASILY</c> accessible with the touch of a <c>button!</c> Sate your hunger of <c>Solvency!</c> Pilfur in <c>Profitability!</c> And laze in the <c>Liquidity!</c></b></div></html>");
         Background.add(jLabel2);
-        jLabel2.setBounds(10, 280, 90, 14);
+        jLabel2.setBounds(10, 110, 580, 190);
 
         getContentPane().add(Background);
         Background.setBounds(0, -20, 600, 300);
@@ -92,15 +95,25 @@ public class Frame1 extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu1);
 
+        jMenu2.setText("Teacher");
+
+        jMenuItem2.setText("Sign in");
+        jMenu2.add(jMenuItem2);
+
+        jMenuItem3.setText("Sign out");
+        jMenu2.add(jMenuItem3);
+
+        jMenuBar1.add(jMenu2);
+
         setJMenuBar(jMenuBar1);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void nextFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextFrameActionPerformed
         this.setVisible(false);
         new Frame2().setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_nextFrameActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
         System.exit(0);
@@ -154,12 +167,15 @@ public class Frame1 extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JMenuItem exit;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JButton nextFrame;
     private javax.swing.JMenuItem toF3fromF1;
     // End of variables declaration//GEN-END:variables
 }

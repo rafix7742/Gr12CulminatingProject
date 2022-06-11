@@ -14,6 +14,7 @@ public class Frame3 extends javax.swing.JFrame {
      * Creates new form Frame3
      */
     public Frame3() {
+        redirect.speedBump = 0;
         initComponents();
     }
 
@@ -28,17 +29,15 @@ public class Frame3 extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         toF1fromF3 = new javax.swing.JMenuItem();
         toF2fromF3 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 300));
 
         jPanel2.setBackground(new java.awt.Color(255, 204, 255));
         jPanel2.setLayout(null);
@@ -48,21 +47,26 @@ public class Frame3 extends javax.swing.JFrame {
         jPanel2.add(jLabel1);
         jLabel1.setBounds(10, 10, 580, 20);
 
-        jLabel2.setText("Company");
-        jPanel2.add(jLabel2);
-        jLabel2.setBounds(10, 40, 50, 14);
+        jButton1.setText("Repeat?");
+        jPanel2.add(jButton1);
+        jButton1.setBounds(240, 10, 340, 23);
 
-        jLabel3.setText("Liquidity");
-        jPanel2.add(jLabel3);
-        jLabel3.setBounds(10, 60, 40, 14);
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Company", "Liquidity", "Solvency", "Profitability"
+            }
+        ));
+        jTable1.setSelectionBackground(new java.awt.Color(255, 153, 153));
+        jScrollPane1.setViewportView(jTable1);
 
-        jLabel4.setText("Solvency");
-        jPanel2.add(jLabel4);
-        jLabel4.setBounds(10, 80, 50, 14);
-
-        jLabel5.setText("Profitability");
-        jPanel2.add(jLabel5);
-        jLabel5.setBounds(10, 100, 60, 14);
+        jPanel2.add(jScrollPane1);
+        jScrollPane1.setBounds(12, 40, 570, 230);
 
         jMenu1.setText("Go to");
 
@@ -146,14 +150,13 @@ public class Frame3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jTable1;
     private javax.swing.JMenuItem toF1fromF3;
     private javax.swing.JMenuItem toF2fromF3;
     // End of variables declaration//GEN-END:variables
