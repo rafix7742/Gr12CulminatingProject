@@ -34,17 +34,30 @@ public class Frame2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         Background = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
         f2Activate = new javax.swing.JButton();
-        liquidity = new javax.swing.JLabel();
-        profitability = new javax.swing.JLabel();
-        solvency = new javax.swing.JLabel();
         name = new javax.swing.JLabel();
-        liqInput = new javax.swing.JTextField();
-        proInput = new javax.swing.JTextField();
-        solInput = new javax.swing.JTextField();
-        nameInput = new javax.swing.JTextField();
+        companyName = new javax.swing.JTextField();
+        netSales = new javax.swing.JTextField();
+        profitability1 = new javax.swing.JLabel();
+        gpmText = new javax.swing.JLabel();
+        grossProfit1 = new javax.swing.JTextField();
+        fractionbar = new javax.swing.JLabel();
+        gpmText1 = new javax.swing.JLabel();
+        grossProfit2 = new javax.swing.JTextField();
+        netSales1 = new javax.swing.JTextField();
+        fractionbar1 = new javax.swing.JLabel();
+        gpmText2 = new javax.swing.JLabel();
+        gpmText3 = new javax.swing.JLabel();
+        grossProfit3 = new javax.swing.JTextField();
+        grossProfit4 = new javax.swing.JTextField();
+        grossProfit5 = new javax.swing.JTextField();
+        grossProfit6 = new javax.swing.JTextField();
+        fractionbar2 = new javax.swing.JLabel();
+        fractionbar3 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         toF1fromF2 = new javax.swing.JMenuItem();
@@ -52,15 +65,19 @@ public class Frame2 extends javax.swing.JFrame {
         jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 350));
+
+        jDesktopPane1.setBackground(new java.awt.Color(255, 255, 255));
+        jDesktopPane1.setBorder(new javax.swing.border.MatteBorder(null));
+        jDesktopPane1.setForeground(new java.awt.Color(255, 255, 255));
 
         Background.setBackground(new java.awt.Color(204, 204, 255));
         Background.setLayout(null);
 
-        title.setFont(new java.awt.Font("Felix Titling", 1, 48)); // NOI18N
-        title.setText("The functioning O_O");
+        title.setFont(new java.awt.Font("Felix Titling", 1, 24)); // NOI18N
+        title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        title.setText("Please insert company infromation");
         Background.add(title);
-        title.setBounds(0, 0, 600, 70);
+        title.setBounds(0, 0, 760, 70);
 
         f2Activate.setText("OK");
         f2Activate.addActionListener(new java.awt.event.ActionListener() {
@@ -69,39 +86,149 @@ public class Frame2 extends javax.swing.JFrame {
             }
         });
         Background.add(f2Activate);
-        f2Activate.setBounds(270, 240, 47, 30);
+        f2Activate.setBounds(710, 330, 47, 30);
 
-        liquidity.setText("Liquidity");
-        Background.add(liquidity);
-        liquidity.setBounds(10, 70, 70, 30);
-
-        profitability.setText("Profitability");
-        Background.add(profitability);
-        profitability.setBounds(10, 110, 70, 30);
-
-        solvency.setText("Solvency");
-        Background.add(solvency);
-        solvency.setBounds(10, 150, 70, 30);
-
-        name.setText("Company Name");
+        name.setText("Company Name:");
         Background.add(name);
-        name.setBounds(10, 200, 80, 14);
+        name.setBounds(20, 70, 80, 14);
 
-        liqInput.setText("jTextField1");
-        Background.add(liqInput);
-        liqInput.setBounds(90, 70, 500, 30);
+        companyName.setText("Facebook");
+        companyName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                companyNameActionPerformed(evt);
+            }
+        });
+        Background.add(companyName);
+        companyName.setBounds(110, 60, 400, 30);
 
-        proInput.setText("jTextField2");
-        Background.add(proInput);
-        proInput.setBounds(90, 110, 500, 30);
+        netSales.setText("Net Sales");
+        netSales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                netSalesActionPerformed(evt);
+            }
+        });
+        Background.add(netSales);
+        netSales.setBounds(130, 270, 80, 30);
 
-        solInput.setText("jTextField3");
-        Background.add(solInput);
-        solInput.setBounds(90, 150, 500, 30);
+        profitability1.setText("Profitability Ratios:");
+        Background.add(profitability1);
+        profitability1.setBounds(10, 100, 110, 30);
 
-        nameInput.setText("jTextField4");
-        Background.add(nameInput);
-        nameInput.setBounds(90, 190, 500, 30);
+        gpmText.setText("Gross Profit Margin:");
+        Background.add(gpmText);
+        gpmText.setBounds(10, 420, 110, 30);
+
+        grossProfit1.setText("Gross Profit");
+        grossProfit1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grossProfit1ActionPerformed(evt);
+            }
+        });
+        Background.add(grossProfit1);
+        grossProfit1.setBounds(130, 310, 80, 30);
+
+        fractionbar.setText("___________");
+        Background.add(fractionbar);
+        fractionbar.setBounds(130, 340, 80, 14);
+
+        gpmText1.setText("Gross Profit Margin:");
+        Background.add(gpmText1);
+        gpmText1.setBounds(10, 150, 110, 30);
+
+        grossProfit2.setText("Gross Profit");
+        grossProfit2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grossProfit2ActionPerformed(evt);
+            }
+        });
+        Background.add(grossProfit2);
+        grossProfit2.setBounds(130, 130, 80, 30);
+
+        netSales1.setText("Net Sales");
+        netSales1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                netSales1ActionPerformed(evt);
+            }
+        });
+        Background.add(netSales1);
+        netSales1.setBounds(130, 180, 80, 30);
+
+        fractionbar1.setText("___________");
+        Background.add(fractionbar1);
+        fractionbar1.setBounds(130, 160, 80, 14);
+
+        gpmText2.setText("Gross Profit Margin:");
+        Background.add(gpmText2);
+        gpmText2.setBounds(10, 230, 110, 30);
+
+        gpmText3.setText("Gross Profit Margin:");
+        Background.add(gpmText3);
+        gpmText3.setBounds(10, 330, 110, 30);
+
+        grossProfit3.setText("Gross Profit");
+        grossProfit3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grossProfit3ActionPerformed(evt);
+            }
+        });
+        Background.add(grossProfit3);
+        grossProfit3.setBounds(130, 400, 80, 30);
+
+        grossProfit4.setText("Gross Profit");
+        grossProfit4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grossProfit4ActionPerformed(evt);
+            }
+        });
+        Background.add(grossProfit4);
+        grossProfit4.setBounds(130, 450, 80, 30);
+
+        grossProfit5.setText("Gross Profit");
+        grossProfit5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grossProfit5ActionPerformed(evt);
+            }
+        });
+        Background.add(grossProfit5);
+        grossProfit5.setBounds(130, 360, 80, 30);
+
+        grossProfit6.setText("Gross Profit");
+        grossProfit6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grossProfit6ActionPerformed(evt);
+            }
+        });
+        Background.add(grossProfit6);
+        grossProfit6.setBounds(130, 220, 80, 30);
+
+        fractionbar2.setText("___________");
+        Background.add(fractionbar2);
+        fractionbar2.setBounds(130, 430, 80, 14);
+
+        fractionbar3.setText("___________");
+        Background.add(fractionbar3);
+        fractionbar3.setBounds(130, 250, 80, 14);
+
+        jDesktopPane1.setLayer(Background, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, 960, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDesktopPane1Layout.createSequentialGroup()
+                .addGap(0, 0, 0)
+                .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, 482, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jScrollPane1.setViewportView(jDesktopPane1);
 
         jMenu1.setText("Go to");
 
@@ -132,20 +259,16 @@ public class Frame2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 958, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 439, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void f2ActivateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f2ActivateActionPerformed
-      new redirect().setVisible(true);
-      this.setVisible(false);
-    }//GEN-LAST:event_f2ActivateActionPerformed
     private void toF1fromF2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toF1fromF2ActionPerformed
         this.setVisible(false);
         new Frame1().setVisible(true);
@@ -155,6 +278,47 @@ public class Frame2 extends javax.swing.JFrame {
         this.setVisible(false);
         new Frame3().setVisible(true);
     }//GEN-LAST:event_toF3fromF3ActionPerformed
+
+    private void grossProfit6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grossProfit6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grossProfit6ActionPerformed
+
+    private void grossProfit5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grossProfit5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grossProfit5ActionPerformed
+
+    private void grossProfit4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grossProfit4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grossProfit4ActionPerformed
+
+    private void grossProfit3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grossProfit3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grossProfit3ActionPerformed
+
+    private void netSales1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_netSales1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_netSales1ActionPerformed
+
+    private void grossProfit2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grossProfit2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grossProfit2ActionPerformed
+
+    private void grossProfit1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grossProfit1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grossProfit1ActionPerformed
+
+    private void netSalesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_netSalesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_netSalesActionPerformed
+
+    private void companyNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_companyNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_companyNameActionPerformed
+
+    private void f2ActivateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f2ActivateActionPerformed
+        new redirect().setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_f2ActivateActionPerformed
 
     /**
      * @param args the command line arguments
@@ -193,18 +357,31 @@ public class Frame2 extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
+    private javax.swing.JTextField companyName;
     private javax.swing.JButton f2Activate;
+    private javax.swing.JLabel fractionbar;
+    private javax.swing.JLabel fractionbar1;
+    private javax.swing.JLabel fractionbar2;
+    private javax.swing.JLabel fractionbar3;
+    private javax.swing.JLabel gpmText;
+    private javax.swing.JLabel gpmText1;
+    private javax.swing.JLabel gpmText2;
+    private javax.swing.JLabel gpmText3;
+    private javax.swing.JTextField grossProfit1;
+    private javax.swing.JTextField grossProfit2;
+    private javax.swing.JTextField grossProfit3;
+    private javax.swing.JTextField grossProfit4;
+    private javax.swing.JTextField grossProfit5;
+    private javax.swing.JTextField grossProfit6;
+    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JTextField liqInput;
-    private javax.swing.JLabel liquidity;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel name;
-    private javax.swing.JTextField nameInput;
-    private javax.swing.JTextField proInput;
-    private javax.swing.JLabel profitability;
-    private javax.swing.JTextField solInput;
-    private javax.swing.JLabel solvency;
+    private javax.swing.JTextField netSales;
+    private javax.swing.JTextField netSales1;
+    private javax.swing.JLabel profitability1;
     private javax.swing.JLabel title;
     private javax.swing.JMenuItem toF1fromF2;
     private javax.swing.JMenuItem toF3fromF3;
