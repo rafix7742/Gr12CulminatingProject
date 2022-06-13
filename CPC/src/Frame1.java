@@ -32,6 +32,7 @@ public class Frame1 extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         toF3fromF1 = new javax.swing.JMenuItem();
         exit = new javax.swing.JMenuItem();
@@ -51,7 +52,7 @@ public class Frame1 extends javax.swing.JFrame {
         Background.add(jLabel1);
         jLabel1.setBounds(20, 20, 560, 70);
 
-        nextFrame.setText("Next Frame");
+        nextFrame.setText("Start");
         nextFrame.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nextFrameActionPerformed(evt);
@@ -68,6 +69,14 @@ public class Frame1 extends javax.swing.JFrame {
         Background.setBounds(0, -20, 600, 300);
 
         jMenu1.setText("Go to");
+
+        jMenuItem4.setText("Help");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem4);
 
         jMenuItem1.setText("Frame 2");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -129,6 +138,11 @@ public class Frame1 extends javax.swing.JFrame {
         new Frame2().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        this.setVisible(false);
+        new HelpFrame().setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -175,6 +189,7 @@ public class Frame1 extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JButton nextFrame;
     private javax.swing.JMenuItem toF3fromF1;
     // End of variables declaration//GEN-END:variables

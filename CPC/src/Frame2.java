@@ -34,6 +34,7 @@ public class Frame2 extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
         Background = new javax.swing.JPanel();
         title = new javax.swing.JLabel();
         f2Activate = new javax.swing.JButton();
@@ -90,11 +91,24 @@ public class Frame2 extends javax.swing.JFrame {
         grossProfit9 = new javax.swing.JTextField();
         netSales4 = new javax.swing.JTextField();
         fractionbar6 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        gpmText12 = new javax.swing.JLabel();
+        grossProfit16 = new javax.swing.JTextField();
+        netSales11 = new javax.swing.JTextField();
+        fractionbar13 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        gpmText13 = new javax.swing.JLabel();
+        grossProfit17 = new javax.swing.JTextField();
+        netSales12 = new javax.swing.JTextField();
+        fractionbar14 = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         toF1fromF2 = new javax.swing.JMenuItem();
         toF3fromF3 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
+
+        jMenuItem1.setText("jMenuItem1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -105,7 +119,7 @@ public class Frame2 extends javax.swing.JFrame {
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         title.setText("Please insert company infromation");
         Background.add(title);
-        title.setBounds(0, 0, 760, 70);
+        title.setBounds(0, 0, 630, 70);
 
         f2Activate.setText("OK");
         f2Activate.addActionListener(new java.awt.event.ActionListener() {
@@ -114,7 +128,7 @@ public class Frame2 extends javax.swing.JFrame {
             }
         });
         Background.add(f2Activate);
-        f2Activate.setBounds(1010, 80, 47, 30);
+        f2Activate.setBounds(530, 60, 100, 30);
 
         name.setText("Company Name:");
         Background.add(name);
@@ -127,7 +141,7 @@ public class Frame2 extends javax.swing.JFrame {
             }
         });
         Background.add(companyName);
-        companyName.setBounds(170, 60, 400, 30);
+        companyName.setBounds(120, 60, 400, 30);
 
         profitability1.setText("Profitability Ratios:");
         Background.add(profitability1);
@@ -145,7 +159,7 @@ public class Frame2 extends javax.swing.JFrame {
                 grossProfit12ActionPerformed(evt);
             }
         });
-        jPanel8.add(grossProfit12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 80, 30));
+        jPanel8.add(grossProfit12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 120, 30));
 
         netSales7.setText("Net Sales");
         netSales7.addActionListener(new java.awt.event.ActionListener() {
@@ -153,10 +167,10 @@ public class Frame2 extends javax.swing.JFrame {
                 netSales7ActionPerformed(evt);
             }
         });
-        jPanel8.add(netSales7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 80, 30));
+        jPanel8.add(netSales7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 120, 30));
 
-        fractionbar9.setText("___________");
-        jPanel8.add(fractionbar9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 80, 20));
+        fractionbar9.setText("____________________");
+        jPanel8.add(fractionbar9, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 130, 20));
 
         Background.add(jPanel8);
         jPanel8.setBounds(0, 140, 270, 90);
@@ -173,7 +187,7 @@ public class Frame2 extends javax.swing.JFrame {
                 grossProfit3ActionPerformed(evt);
             }
         });
-        jPanel9.add(grossProfit3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 80, 30));
+        jPanel9.add(grossProfit3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 120, 30));
 
         netSales2.setText("Net Sales");
         netSales2.addActionListener(new java.awt.event.ActionListener() {
@@ -181,10 +195,10 @@ public class Frame2 extends javax.swing.JFrame {
                 netSales2ActionPerformed(evt);
             }
         });
-        jPanel9.add(netSales2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 80, 30));
+        jPanel9.add(netSales2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 120, 30));
 
-        fractionbar2.setText("___________");
-        jPanel9.add(fractionbar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 80, 20));
+        fractionbar2.setText("____________________");
+        jPanel9.add(fractionbar2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 120, 20));
 
         Background.add(jPanel9);
         jPanel9.setBounds(0, 230, 270, 90);
@@ -201,7 +215,7 @@ public class Frame2 extends javax.swing.JFrame {
                 grossProfit13ActionPerformed(evt);
             }
         });
-        jPanel10.add(grossProfit13, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 80, 30));
+        jPanel10.add(grossProfit13, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 120, 30));
 
         netSales8.setText("Average Total Assets");
         netSales8.addActionListener(new java.awt.event.ActionListener() {
@@ -209,10 +223,10 @@ public class Frame2 extends javax.swing.JFrame {
                 netSales8ActionPerformed(evt);
             }
         });
-        jPanel10.add(netSales8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 130, 30));
+        jPanel10.add(netSales8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 120, 30));
 
-        fractionbar10.setText("__________________");
-        jPanel10.add(fractionbar10, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 130, 20));
+        fractionbar10.setText("____________________");
+        jPanel10.add(fractionbar10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 130, 20));
 
         Background.add(jPanel10);
         jPanel10.setBounds(0, 320, 270, 90);
@@ -229,7 +243,7 @@ public class Frame2 extends javax.swing.JFrame {
                 grossProfit14ActionPerformed(evt);
             }
         });
-        jPanel11.add(grossProfit14, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 80, 30));
+        jPanel11.add(grossProfit14, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
 
         netSales9.setText("Average Total Assets");
         netSales9.addActionListener(new java.awt.event.ActionListener() {
@@ -237,10 +251,10 @@ public class Frame2 extends javax.swing.JFrame {
                 netSales9ActionPerformed(evt);
             }
         });
-        jPanel11.add(netSales9, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 130, 30));
+        jPanel11.add(netSales9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 120, 30));
 
-        fractionbar11.setText("_________________");
-        jPanel11.add(fractionbar11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 120, 20));
+        fractionbar11.setText("____________________");
+        jPanel11.add(fractionbar11, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 120, 20));
 
         Background.add(jPanel11);
         jPanel11.setBounds(0, 410, 270, 90);
@@ -257,18 +271,18 @@ public class Frame2 extends javax.swing.JFrame {
                 grossProfit15ActionPerformed(evt);
             }
         });
-        jPanel12.add(grossProfit15, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 80, 30));
+        jPanel12.add(grossProfit15, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
 
-        netSales10.setText("Avg Shareholder's Equity");
+        netSales10.setText("Avg Shareholder's Eqt");
         netSales10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 netSales10ActionPerformed(evt);
             }
         });
-        jPanel12.add(netSales10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 150, 30));
+        jPanel12.add(netSales10, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 120, 30));
 
         fractionbar12.setText("____________________");
-        jPanel12.add(fractionbar12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 140, 20));
+        jPanel12.add(fractionbar12, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 140, 20));
 
         Background.add(jPanel12);
         jPanel12.setBounds(0, 500, 270, 90);
@@ -276,27 +290,27 @@ public class Frame2 extends javax.swing.JFrame {
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gpmText4.setText("Profit Margin:");
-        jPanel2.add(gpmText4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 110, 30));
+        gpmText4.setText("Working Capital:");
+        jPanel2.add(gpmText4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 80, 30));
 
-        grossProfit8.setText("Net Income");
+        grossProfit8.setText("Current Assets");
         grossProfit8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 grossProfit8ActionPerformed(evt);
             }
         });
-        jPanel2.add(grossProfit8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 80, 30));
+        jPanel2.add(grossProfit8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
 
-        netSales3.setText("Net Sales");
+        netSales3.setText("Current Liabilities");
         netSales3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 netSales3ActionPerformed(evt);
             }
         });
-        jPanel2.add(netSales3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 80, 30));
+        jPanel2.add(netSales3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 120, 30));
 
-        fractionbar5.setText("___________");
-        jPanel2.add(fractionbar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 80, 20));
+        fractionbar5.setText("____________________");
+        jPanel2.add(fractionbar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 130, 20));
 
         Background.add(jPanel2);
         jPanel2.setBounds(360, 140, 270, 90);
@@ -304,27 +318,27 @@ public class Frame2 extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gpmText1.setText("Gross Profit Margin:");
+        gpmText1.setText("Current Ratio:");
         jPanel1.add(gpmText1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 110, 30));
 
-        grossProfit2.setText("Gross Profit");
+        grossProfit2.setText("Current Assets");
         grossProfit2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 grossProfit2ActionPerformed(evt);
             }
         });
-        jPanel1.add(grossProfit2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 80, 30));
+        jPanel1.add(grossProfit2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 120, 30));
 
-        netSales1.setText("Net Sales");
+        netSales1.setText("Current Liabilities");
         netSales1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 netSales1ActionPerformed(evt);
             }
         });
-        jPanel1.add(netSales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 80, 30));
+        jPanel1.add(netSales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 120, 30));
 
-        fractionbar1.setText("___________");
-        jPanel1.add(fractionbar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 80, 20));
+        fractionbar1.setText("____________________");
+        jPanel1.add(fractionbar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 130, 20));
 
         Background.add(jPanel1);
         jPanel1.setBounds(360, 230, 270, 90);
@@ -332,26 +346,26 @@ public class Frame2 extends javax.swing.JFrame {
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gpmText8.setText("Asset Turnover:");
+        gpmText8.setText("Inventory Turnover:");
         jPanel6.add(gpmText8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 110, 30));
 
-        grossProfit11.setText("Net Sales");
+        grossProfit11.setText("Cost of Goods Sold");
         grossProfit11.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 grossProfit11ActionPerformed(evt);
             }
         });
-        jPanel6.add(grossProfit11, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 80, 30));
+        jPanel6.add(grossProfit11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 120, 30));
 
-        netSales6.setText("Average Total Assets");
+        netSales6.setText("Average inventory");
         netSales6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 netSales6ActionPerformed(evt);
             }
         });
-        jPanel6.add(netSales6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 130, 30));
+        jPanel6.add(netSales6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 120, 30));
 
-        fractionbar8.setText("__________________");
+        fractionbar8.setText("____________________");
         jPanel6.add(fractionbar8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 130, 20));
 
         Background.add(jPanel6);
@@ -360,26 +374,26 @@ public class Frame2 extends javax.swing.JFrame {
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gpmText7.setText("Return on Assets:");
+        gpmText7.setText("Receivables Turnover:");
         jPanel5.add(gpmText7, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 110, 30));
 
-        grossProfit10.setText("Net Income");
+        grossProfit10.setText("Net Credit Sales");
         grossProfit10.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 grossProfit10ActionPerformed(evt);
             }
         });
-        jPanel5.add(grossProfit10, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, 80, 30));
+        jPanel5.add(grossProfit10, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 120, 30));
 
-        netSales5.setText("Average Total Assets");
+        netSales5.setText("Avg Gross receivables");
         netSales5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 netSales5ActionPerformed(evt);
             }
         });
-        jPanel5.add(netSales5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 130, 30));
+        jPanel5.add(netSales5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 120, 30));
 
-        fractionbar7.setText("_________________");
+        fractionbar7.setText("____________________");
         jPanel5.add(fractionbar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 120, 20));
 
         Background.add(jPanel5);
@@ -388,24 +402,24 @@ public class Frame2 extends javax.swing.JFrame {
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        gpmText6.setText("Return on Equity:");
+        gpmText6.setText("Debt Total Assets:");
         jPanel4.add(gpmText6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 110, 30));
 
-        grossProfit9.setText("Net Income");
+        grossProfit9.setText("Total Liabilities");
         grossProfit9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 grossProfit9ActionPerformed(evt);
             }
         });
-        jPanel4.add(grossProfit9, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 10, 80, 30));
+        jPanel4.add(grossProfit9, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 120, 30));
 
-        netSales4.setText("Avg Shareholder's Equity");
+        netSales4.setText("Total Assets");
         netSales4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 netSales4ActionPerformed(evt);
             }
         });
-        jPanel4.add(netSales4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 150, 30));
+        jPanel4.add(netSales4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 120, 30));
 
         fractionbar6.setText("____________________");
         jPanel4.add(fractionbar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 140, 20));
@@ -413,7 +427,71 @@ public class Frame2 extends javax.swing.JFrame {
         Background.add(jPanel4);
         jPanel4.setBounds(360, 500, 270, 90);
 
+        jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gpmText12.setText("Price-Earnings Ratio:");
+        jPanel7.add(gpmText12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 110, 30));
+
+        grossProfit16.setText("Market Price per share");
+        grossProfit16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grossProfit16ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(grossProfit16, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 120, 30));
+
+        netSales11.setText("Earnings Per Share");
+        netSales11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                netSales11ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(netSales11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 120, 30));
+
+        fractionbar13.setText("____________________");
+        jPanel7.add(fractionbar13, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 140, 20));
+
+        Background.add(jPanel7);
+        jPanel7.setBounds(0, 590, 270, 90);
+
+        jPanel13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        gpmText13.setText("Payout Ratio:");
+        jPanel13.add(gpmText13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 110, 30));
+
+        grossProfit17.setText("Cash Dividends");
+        grossProfit17.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                grossProfit17ActionPerformed(evt);
+            }
+        });
+        jPanel13.add(grossProfit17, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 120, 30));
+
+        netSales12.setText("Net Income");
+        netSales12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                netSales12ActionPerformed(evt);
+            }
+        });
+        jPanel13.add(netSales12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 120, 30));
+
+        fractionbar14.setText("____________________");
+        jPanel13.add(fractionbar14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 140, 20));
+
+        Background.add(jPanel13);
+        jPanel13.setBounds(360, 590, 270, 90);
+
         jMenu1.setText("Go to");
+
+        jMenuItem2.setText("Help");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu1.add(jMenuItem2);
 
         toF1fromF2.setText("Frame 1");
         toF1fromF2.addActionListener(new java.awt.event.ActionListener() {
@@ -442,7 +520,7 @@ public class Frame2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, 1237, Short.MAX_VALUE)
+            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -503,12 +581,13 @@ public class Frame2 extends javax.swing.JFrame {
     }//GEN-LAST:event_grossProfit2ActionPerformed
 
     private void companyNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_companyNameActionPerformed
-        // TODO add your handling code here:
+            companyName.setToolTipText("Insert the name of the company you want to calculate");
     }//GEN-LAST:event_companyNameActionPerformed
 
     private void f2ActivateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_f2ActivateActionPerformed
         new redirect().setVisible(true);
         this.setVisible(false);
+        f2Activate.setToolTipText("make sure you check all the ratios! You don't want to remove this after all your hard work!");
     }//GEN-LAST:event_f2ActivateActionPerformed
 
     private void netSales10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_netSales10ActionPerformed
@@ -548,8 +627,29 @@ public class Frame2 extends javax.swing.JFrame {
     }//GEN-LAST:event_netSales7ActionPerformed
 
     private void grossProfit12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grossProfit12ActionPerformed
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_grossProfit12ActionPerformed
+
+    private void grossProfit16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grossProfit16ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grossProfit16ActionPerformed
+
+    private void netSales11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_netSales11ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_netSales11ActionPerformed
+
+    private void grossProfit17ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_grossProfit17ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_grossProfit17ActionPerformed
+
+    private void netSales12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_netSales12ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_netSales12ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        this.setVisible(false);
+        new HelpFrame().setVisible(true);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -594,6 +694,8 @@ public class Frame2 extends javax.swing.JFrame {
     private javax.swing.JLabel fractionbar10;
     private javax.swing.JLabel fractionbar11;
     private javax.swing.JLabel fractionbar12;
+    private javax.swing.JLabel fractionbar13;
+    private javax.swing.JLabel fractionbar14;
     private javax.swing.JLabel fractionbar2;
     private javax.swing.JLabel fractionbar5;
     private javax.swing.JLabel fractionbar6;
@@ -603,6 +705,8 @@ public class Frame2 extends javax.swing.JFrame {
     private javax.swing.JLabel gpmText1;
     private javax.swing.JLabel gpmText10;
     private javax.swing.JLabel gpmText11;
+    private javax.swing.JLabel gpmText12;
+    private javax.swing.JLabel gpmText13;
     private javax.swing.JLabel gpmText2;
     private javax.swing.JLabel gpmText4;
     private javax.swing.JLabel gpmText5;
@@ -616,6 +720,8 @@ public class Frame2 extends javax.swing.JFrame {
     private javax.swing.JTextField grossProfit13;
     private javax.swing.JTextField grossProfit14;
     private javax.swing.JTextField grossProfit15;
+    private javax.swing.JTextField grossProfit16;
+    private javax.swing.JTextField grossProfit17;
     private javax.swing.JTextField grossProfit2;
     private javax.swing.JTextField grossProfit3;
     private javax.swing.JTextField grossProfit8;
@@ -623,19 +729,25 @@ public class Frame2 extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JLabel name;
     private javax.swing.JTextField netSales1;
     private javax.swing.JTextField netSales10;
+    private javax.swing.JTextField netSales11;
+    private javax.swing.JTextField netSales12;
     private javax.swing.JTextField netSales2;
     private javax.swing.JTextField netSales3;
     private javax.swing.JTextField netSales4;
