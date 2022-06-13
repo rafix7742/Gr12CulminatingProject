@@ -29,7 +29,7 @@ public class Frame3 extends javax.swing.JFrame {
 
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Repeat = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -45,11 +45,16 @@ public class Frame3 extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
         jLabel1.setText("The leaderboard");
         jPanel2.add(jLabel1);
-        jLabel1.setBounds(10, 10, 580, 20);
+        jLabel1.setBounds(10, 10, 230, 20);
 
-        jButton1.setText("Repeat?");
-        jPanel2.add(jButton1);
-        jButton1.setBounds(240, 10, 340, 23);
+        Repeat.setText("Repeat?");
+        Repeat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RepeatActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Repeat);
+        Repeat.setBounds(240, 10, 340, 23);
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -114,6 +119,12 @@ public class Frame3 extends javax.swing.JFrame {
         new Frame2().setVisible(true);
     }//GEN-LAST:event_toF2fromF3ActionPerformed
 
+    private void RepeatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RepeatActionPerformed
+        this.setVisible(false);
+        new Frame2().setVisible(true);
+        Repeat.setToolTipText("Want to add another company?");
+    }//GEN-LAST:event_RepeatActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -150,7 +161,7 @@ public class Frame3 extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Repeat;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenuBar jMenuBar1;
