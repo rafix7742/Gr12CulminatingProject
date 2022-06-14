@@ -71,7 +71,7 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="Background" min="-2" pref="630" max="-2" attributes="0"/>
+          <Component id="Background" alignment="0" pref="871" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -492,7 +492,7 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="360" y="140" width="270" height="90"/>
+              <AbsoluteConstraints x="360" y="140" width="430" height="90"/>
             </Constraint>
           </Constraints>
 
@@ -519,7 +519,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="100" y="10" width="120" height="30"/>
+                  <AbsoluteConstraints x="100" y="30" width="120" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -532,17 +532,17 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="100" y="50" width="120" height="30"/>
+                  <AbsoluteConstraints x="260" y="30" width="120" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="fractionbar5">
               <Properties>
-                <Property name="text" type="java.lang.String" value="____________________"/>
+                <Property name="text" type="java.lang.String" value="__"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="100" y="30" width="130" height="20"/>
+                  <AbsoluteConstraints x="230" y="30" width="130" height="20"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -585,7 +585,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="90" y="10" width="120" height="30"/>
+                  <AbsoluteConstraints x="110" y="10" width="120" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -598,17 +598,17 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="90" y="50" width="120" height="30"/>
+                  <AbsoluteConstraints x="110" y="50" width="120" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="fractionbar1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="____________________"/>
+                <Property name="text" type="java.lang.String" value="________________"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="90" y="30" width="130" height="20"/>
+                  <AbsoluteConstraints x="110" y="30" width="130" height="20"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -651,7 +651,7 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="110" y="10" width="120" height="30"/>
+                  <AbsoluteConstraints x="120" y="10" width="120" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -664,17 +664,17 @@
               </Events>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="110" y="50" width="120" height="30"/>
+                  <AbsoluteConstraints x="120" y="50" width="120" height="30"/>
                 </Constraint>
               </Constraints>
             </Component>
             <Component class="javax.swing.JLabel" name="fractionbar8">
               <Properties>
-                <Property name="text" type="java.lang.String" value="____________________"/>
+                <Property name="text" type="java.lang.String" value="________________"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="110" y="30" width="130" height="20"/>
+                  <AbsoluteConstraints x="120" y="30" width="130" height="20"/>
                 </Constraint>
               </Constraints>
             </Component>
@@ -736,7 +736,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="fractionbar7">
               <Properties>
-                <Property name="text" type="java.lang.String" value="____________________"/>
+                <Property name="text" type="java.lang.String" value="________________"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -802,7 +802,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="fractionbar6">
               <Properties>
-                <Property name="text" type="java.lang.String" value="____________________"/>
+                <Property name="text" type="java.lang.String" value="_________________"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -934,7 +934,7 @@
             </Component>
             <Component class="javax.swing.JLabel" name="fractionbar14">
               <Properties>
-                <Property name="text" type="java.lang.String" value="____________________"/>
+                <Property name="text" type="java.lang.String" value="________________"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

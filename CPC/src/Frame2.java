@@ -299,7 +299,7 @@ public class Frame2 extends javax.swing.JFrame {
                 grossProfit8ActionPerformed(evt);
             }
         });
-        jPanel2.add(grossProfit8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 10, 120, 30));
+        jPanel2.add(grossProfit8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 120, 30));
 
         netSales3.setText("Current Liabilities");
         netSales3.addActionListener(new java.awt.event.ActionListener() {
@@ -307,13 +307,13 @@ public class Frame2 extends javax.swing.JFrame {
                 netSales3ActionPerformed(evt);
             }
         });
-        jPanel2.add(netSales3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 50, 120, 30));
+        jPanel2.add(netSales3, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 30, 120, 30));
 
-        fractionbar5.setText("____________________");
-        jPanel2.add(fractionbar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 130, 20));
+        fractionbar5.setText("__");
+        jPanel2.add(fractionbar5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 130, 20));
 
         Background.add(jPanel2);
-        jPanel2.setBounds(360, 140, 270, 90);
+        jPanel2.setBounds(360, 140, 430, 90);
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -327,7 +327,7 @@ public class Frame2 extends javax.swing.JFrame {
                 grossProfit2ActionPerformed(evt);
             }
         });
-        jPanel1.add(grossProfit2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 10, 120, 30));
+        jPanel1.add(grossProfit2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 120, 30));
 
         netSales1.setText("Current Liabilities");
         netSales1.addActionListener(new java.awt.event.ActionListener() {
@@ -335,10 +335,10 @@ public class Frame2 extends javax.swing.JFrame {
                 netSales1ActionPerformed(evt);
             }
         });
-        jPanel1.add(netSales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 120, 30));
+        jPanel1.add(netSales1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 120, 30));
 
-        fractionbar1.setText("____________________");
-        jPanel1.add(fractionbar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 130, 20));
+        fractionbar1.setText("________________");
+        jPanel1.add(fractionbar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 130, 20));
 
         Background.add(jPanel1);
         jPanel1.setBounds(360, 230, 270, 90);
@@ -355,7 +355,7 @@ public class Frame2 extends javax.swing.JFrame {
                 grossProfit11ActionPerformed(evt);
             }
         });
-        jPanel6.add(grossProfit11, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 10, 120, 30));
+        jPanel6.add(grossProfit11, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 120, 30));
 
         netSales6.setText("Average inventory");
         netSales6.addActionListener(new java.awt.event.ActionListener() {
@@ -363,10 +363,10 @@ public class Frame2 extends javax.swing.JFrame {
                 netSales6ActionPerformed(evt);
             }
         });
-        jPanel6.add(netSales6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 120, 30));
+        jPanel6.add(netSales6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 120, 30));
 
-        fractionbar8.setText("____________________");
-        jPanel6.add(fractionbar8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 130, 20));
+        fractionbar8.setText("________________");
+        jPanel6.add(fractionbar8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 130, 20));
 
         Background.add(jPanel6);
         jPanel6.setBounds(360, 320, 270, 90);
@@ -393,7 +393,7 @@ public class Frame2 extends javax.swing.JFrame {
         });
         jPanel5.add(netSales5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 120, 30));
 
-        fractionbar7.setText("____________________");
+        fractionbar7.setText("________________");
         jPanel5.add(fractionbar7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, 120, 20));
 
         Background.add(jPanel5);
@@ -421,7 +421,7 @@ public class Frame2 extends javax.swing.JFrame {
         });
         jPanel4.add(netSales4, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 50, 120, 30));
 
-        fractionbar6.setText("____________________");
+        fractionbar6.setText("_________________");
         jPanel4.add(fractionbar6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 30, 140, 20));
 
         Background.add(jPanel4);
@@ -477,7 +477,7 @@ public class Frame2 extends javax.swing.JFrame {
         });
         jPanel13.add(netSales12, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 50, 120, 30));
 
-        fractionbar14.setText("____________________");
+        fractionbar14.setText("________________");
         jPanel13.add(fractionbar14, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 140, 20));
 
         Background.add(jPanel13);
@@ -520,7 +520,7 @@ public class Frame2 extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, 871, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
