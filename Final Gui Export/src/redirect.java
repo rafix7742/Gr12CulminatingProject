@@ -1,5 +1,16 @@
 
 import java.awt.FlowLayout;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JProgressBar;
@@ -112,37 +123,38 @@ public class redirect extends javax.swing.JFrame {
          //Above are all liquidity ratios
          companyOrganizer.ratios[11] = Calculations.debtTtlAssets(companyOrganizer.totalLiab,companyOrganizer.totalAssets);
          //Above is a solvency ratio
+         
          double[] temp = new double[12];
          for (int i = 0; i < temp.length; i++) {
            temp[i] = companyOrganizer.ratios[i];
         }
          
          
-         while(temp[0]>=0.5){
+         while(temp[0]>0.5){
              temp[0]/=10;
          }
          temp[0]+=0.2;
          //gives weight to the profit margin for a maximum of 0.5 in profitability
-         while(temp[1]>=1){
+         while(temp[1]>1){
              temp[0]/=10;
          }
          temp[1]+=0.3;
          //gives weight to the profit margin for a maximum of 1 in profitability
-         while(temp[3]>=0.5){
+         while(temp[3]>0.5){
              temp[3]/=4;
          }
          temp[3]+=0.2;
          //gives weight to returns on assets up to a maximum of 0.5 in profitability
-         while(temp[4]>=1.5){
+         while(temp[4]>1.5){
              temp[4]/=5;
          }
          temp[4]+=0.4;
          //gives weight to returns on equity up to a maximum of 1.5 in profitability
-         if(temp[5]>=40){
+         if(temp[5]>40){
              temp[5] = 1;
          }
          //if the price earnings ratio is above 40 times earnings then add 1 in profitability
-         while(temp[6]>=1.5){
+         while(temp[6]>1.5){
              temp[6]/=5;
          }
          temp[6]+= 0.3;
@@ -152,20 +164,21 @@ public class redirect extends javax.swing.JFrame {
          if(companyOrganizer.profitabilityScore>5){
              companyOrganizer.profitabilityScore = 5;
          }
+         
          //companyOrganizer.profitability.add(companyOrganizer.profitabilityScore);
          if(temp[7]>0){
              temp[7]=1.5;
          }
          //adds 1.5 to liquidity score, if the working capital is negative this is a terrible sign
-         if(temp[8]>=1){
+         if(temp[8]>1){
              temp[7]=1.5;
          }
-         while(temp[9]>=1){
+         while(temp[9]>1){
              temp[9]/=4;
          }
          temp[9]+=0.2;
          //the premise is the same as before
-         while(temp[10]>=1){
+         while(temp[10]>1){
              temp[10]/=4;
          }
          temp[10]+=0.2;
@@ -177,6 +190,34 @@ public class redirect extends javax.swing.JFrame {
          }
          companyOrganizer.solvencyScore = tempSolvScore;
          companyOrganizer.companies.add(new companyOrganizer(companyOrganizer.companyName,companyOrganizer.profitabilityScore,companyOrganizer.liquidityScore,companyOrganizer.solvencyScore));
+         File file = new File("companies.txt");
+         try{
+             //FileWriter fr = new FileWriter("hello.txt");
+             
+            FileOutputStream writeData = new FileOutputStream(file);
+            ObjectOutputStream writeStream = new ObjectOutputStream(writeData);
+
+            writeStream.writeObject(companyOrganizer.companies);
+            //writeStream.flush();
+            writeStream.close();
+            //fr.close();
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
+           /*
+        try{
+            FileInputStream readData = new FileInputStream("companies.txt");
+            ObjectInputStream readStream = new ObjectInputStream(readData);
+
+            ArrayList hold = (ArrayList<companyOrganizer>) readStream.readObject();
+            readStream.close();
+
+            System.out.println(hold.toString());
+        }catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+         */
+         //companyOrganizer.companies.add(new companyOrganizer(companyOrganizer.companyName,companyOrganizer.profitabilityScore,companyOrganizer.liquidityScore,companyOrganizer.solvencyScore));
          
          //jLabel1.setText(String.valueOf(companyOrganizer.profitabilityScore));
          

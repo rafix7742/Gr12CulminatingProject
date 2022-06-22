@@ -1,4 +1,5 @@
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /*
@@ -10,7 +11,7 @@ import java.util.ArrayList;
  *
  * @author Rafik
  */
-public class companyOrganizer{
+public class companyOrganizer implements Serializable{
     public static String companyName;
     public static double netIncome;
     public static double netSales;
