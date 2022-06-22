@@ -97,8 +97,93 @@ public class redirect extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    this.setVisible(false);
-    new Frame3().setVisible(true);
+         companyOrganizer.ratios[0] = Calculations.profMarg(companyOrganizer.netIncome,companyOrganizer.netSales);
+         companyOrganizer.ratios[1] = Calculations.grosProfMarg(companyOrganizer.grossProfit,companyOrganizer.netSales);
+         companyOrganizer.ratios[2] = Calculations.assetTrnOvr(companyOrganizer.netSales,companyOrganizer.avgTotalAssets);
+         companyOrganizer.ratios[3] = Calculations.rtrnOnAssets(companyOrganizer.netIncome,companyOrganizer.avgTotalAssets);
+         companyOrganizer.ratios[4] = Calculations.rtrnOnEquity(companyOrganizer.netIncome,companyOrganizer.avgShareEqt);
+         companyOrganizer.ratios[5] = Calculations.prceErngRATIO(companyOrganizer.marketSharePrice,companyOrganizer.eps);
+         companyOrganizer.ratios[6] = Calculations.payoutRATIO(companyOrganizer.dividends,companyOrganizer.netIncome);
+         //Above are all profit ratios
+         companyOrganizer.ratios[7] = Calculations.wrkngCap(companyOrganizer.currentAssets,companyOrganizer.currentLiab);
+         companyOrganizer.ratios[8] = Calculations.crrtRATIO(companyOrganizer.currentAssets,companyOrganizer.currentLiab);
+         companyOrganizer.ratios[9] = Calculations.invTrnvr(companyOrganizer.cogs,companyOrganizer.avgInv);
+         companyOrganizer.ratios[10] = Calculations.recvableTrnvr(companyOrganizer.creditSales,companyOrganizer.totalAssets);
+         //Above are all liquidity ratios
+         companyOrganizer.ratios[11] = Calculations.debtTtlAssets(companyOrganizer.totalLiab,companyOrganizer.totalAssets);
+         //Above is a solvency ratio
+         double[] temp = new double[12];
+         for (int i = 0; i < temp.length; i++) {
+           temp[i] = companyOrganizer.ratios[i];
+        }
+         
+         
+         while(temp[0]>=0.5){
+             temp[0]/=10;
+         }
+         temp[0]+=0.2;
+         //gives weight to the profit margin for a maximum of 0.5 in profitability
+         while(temp[1]>=1){
+             temp[0]/=10;
+         }
+         temp[1]+=0.3;
+         //gives weight to the profit margin for a maximum of 1 in profitability
+         while(temp[3]>=0.5){
+             temp[3]/=4;
+         }
+         temp[3]+=0.2;
+         //gives weight to returns on assets up to a maximum of 0.5 in profitability
+         while(temp[4]>=1.5){
+             temp[4]/=5;
+         }
+         temp[4]+=0.4;
+         //gives weight to returns on equity up to a maximum of 1.5 in profitability
+         if(temp[5]>=40){
+             temp[5] = 1;
+         }
+         //if the price earnings ratio is above 40 times earnings then add 1 in profitability
+         while(temp[6]>=1.5){
+             temp[6]/=5;
+         }
+         temp[6]+= 0.3;
+         //gives weight to the payout ratio up to a maximum of 1.5 in profitability
+         companyOrganizer.profitabilityScore = temp[0]+temp[1]+temp[3]+temp[4]+temp[5]+temp[6];
+         //Note: the weights are arbirtaty in nature and are for the fun of a leaderboard
+         if(companyOrganizer.profitabilityScore>5){
+             companyOrganizer.profitabilityScore = 5;
+         }
+         //companyOrganizer.profitability.add(companyOrganizer.profitabilityScore);
+         if(temp[7]>0){
+             temp[7]=1.5;
+         }
+         //adds 1.5 to liquidity score, if the working capital is negative this is a terrible sign
+         if(temp[8]>=1){
+             temp[7]=1.5;
+         }
+         while(temp[9]>=1){
+             temp[9]/=4;
+         }
+         temp[9]+=0.2;
+         //the premise is the same as before
+         while(temp[10]>=1){
+             temp[10]/=4;
+         }
+         temp[10]+=0.2;
+         companyOrganizer.liquidityScore = temp[7]+temp[8]+temp[9]+temp[10];
+         int tempSolvScore = 5;
+         while(temp[11]>0.9){
+             tempSolvScore-=0.15;
+             temp[11]-=0.1;
+         }
+         companyOrganizer.solvencyScore = tempSolvScore;
+         companyOrganizer.companies.add(new companyOrganizer(companyOrganizer.companyName,companyOrganizer.profitabilityScore,companyOrganizer.liquidityScore,companyOrganizer.solvencyScore));
+         
+         //jLabel1.setText(String.valueOf(companyOrganizer.profitabilityScore));
+         
+         
+        this.setVisible(false);
+    new Leaderboard().setVisible(true);
+    
 //        final int MAX = 100;
 //        final JFrame frame = new JFrame("JProgress Demo");
 //        
@@ -135,7 +220,7 @@ public class redirect extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
-        new Frame2().setVisible(true);
+        new CompanyInput().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed

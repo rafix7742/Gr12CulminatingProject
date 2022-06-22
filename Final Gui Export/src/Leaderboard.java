@@ -8,12 +8,12 @@
  *
  * @author hayou1838
  */
-public class Frame3 extends javax.swing.JFrame {
+public class Leaderboard extends javax.swing.JFrame {
 
     /**
      * Creates new form Frame3
      */
-    public Frame3() {
+    public Leaderboard() {
         redirect.speedBump = 0;
         initComponents();
     }
@@ -58,17 +58,38 @@ public class Frame3 extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "Company", "Liquidity", "Solvency", "Profitability"
+                "Company", "Liquidity", "Solvency", "Profitability", "Overall"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jTable1.setSelectionBackground(new java.awt.Color(255, 153, 153));
         jScrollPane1.setViewportView(jTable1);
+        if (jTable1.getColumnModel().getColumnCount() > 0) {
+            jTable1.getColumnModel().getColumn(0).setResizable(false);
+            jTable1.getColumnModel().getColumn(1).setResizable(false);
+            jTable1.getColumnModel().getColumn(2).setResizable(false);
+            jTable1.getColumnModel().getColumn(3).setResizable(false);
+            jTable1.getColumnModel().getColumn(4).setResizable(false);
+        }
 
         jPanel2.add(jScrollPane1);
         jScrollPane1.setBounds(12, 40, 570, 230);
@@ -111,17 +132,17 @@ public class Frame3 extends javax.swing.JFrame {
 
     private void toF1fromF3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toF1fromF3ActionPerformed
         this.setVisible(false);
-        new Frame1().setVisible(true);
+        new Introduction().setVisible(true);
     }//GEN-LAST:event_toF1fromF3ActionPerformed
 
     private void toF2fromF3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toF2fromF3ActionPerformed
         this.setVisible(false);
-        new Frame2().setVisible(true);
+        new CompanyInput().setVisible(true);
     }//GEN-LAST:event_toF2fromF3ActionPerformed
 
     private void RepeatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RepeatActionPerformed
         this.setVisible(false);
-        new Frame2().setVisible(true);
+        new CompanyInput().setVisible(true);
         Repeat.setToolTipText("Want to add another company?");
     }//GEN-LAST:event_RepeatActionPerformed
 
@@ -142,20 +163,21 @@ public class Frame3 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Frame3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Leaderboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Frame3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Leaderboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Frame3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Leaderboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Frame3.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Leaderboard.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Frame3().setVisible(true);
+                new Leaderboard().setVisible(true);
             }
         });
     }

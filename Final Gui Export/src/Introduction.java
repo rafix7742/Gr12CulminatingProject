@@ -8,12 +8,12 @@
  *
  * @author Hayou1838
  */
-public class Frame1 extends javax.swing.JFrame {
+public class Introduction extends javax.swing.JFrame {
 
     /**
      * Creates new form Frame1
      */
-    public Frame1() {
+    public Introduction() {
         initComponents();
     }
 
@@ -131,7 +131,7 @@ public class Frame1 extends javax.swing.JFrame {
 
     private void nextFrameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nextFrameActionPerformed
         this.setVisible(false);
-        new Frame2().setVisible(true);
+        new CompanyInput().setVisible(true);
     }//GEN-LAST:event_nextFrameActionPerformed
 
     private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
@@ -140,12 +140,12 @@ public class Frame1 extends javax.swing.JFrame {
 
     private void toF3fromF1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_toF3fromF1ActionPerformed
         this.setVisible(false);
-        new Frame3().setVisible(true);
+        new Leaderboard().setVisible(true);
     }//GEN-LAST:event_toF3fromF1ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         this.setVisible(false);
-        new Frame2().setVisible(true);
+        new CompanyInput().setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
@@ -175,20 +175,21 @@ public class Frame1 extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Frame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Introduction.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Frame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Introduction.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Frame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Introduction.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Frame1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Introduction.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Frame1().setVisible(true);
+                new Introduction().setVisible(true);
             }
         });
     }

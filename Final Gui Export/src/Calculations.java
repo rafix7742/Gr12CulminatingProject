@@ -8,51 +8,53 @@
  * @author Hamzi
  */
 public class Calculations {
-    public double profMarg(double v1, double v2){
-        return v1 / v2;
+    public static double profMarg(double netIncome, double netSales){
+        return netIncome / netSales;
     }
     
-    public double grosProfMarg(double v1, double v2){
-        return v1 / v2;
+    public static double grosProfMarg(double grossProfit, double netSales){
+        return grossProfit / netSales;
     }
     
-    public double assetTrnOvr(double v1, double v2){
-        return v1 / v2;
+    public static double assetTrnOvr(double netSales, double avgTotalAssets){
+        return netSales / avgTotalAssets;
     }
     
-    public double rtrnOnAssets(double v1, double v2){
-        return v1 / v2;
+    public static double rtrnOnAssets(double netIncome, double avgTotalAssets){
+        return netIncome / avgTotalAssets;
     }
     
-    public double rtrnOnEquity(double v1, double v2){
-        return v1 / v2;
+    public static double rtrnOnEquity(double netIncome, double avgShareEqt){
+        return netIncome / avgShareEqt;
     }
     
-    public double prceErngRATIO(double v1, double v2){
-        return v1 / v2;
+    public static double prceErngRATIO(double marketSharePrice, double eps){
+        return marketSharePrice / eps;
     }
     
-    public double wrkngCap(double v1, double v2){
-        return v1 - v2;
+    public static double wrkngCap(double currentAssets, double currentLiab){
+        return currentAssets - currentLiab;
     }
     
-    public double crrtRATIO(double v1, double v2){
-        return v1 / v2;
+    public static double crrtRATIO(double currentAssets, double currentLiab){
+        return currentAssets / currentLiab;
     }
     
-    public double invTrnvr(double v1, double v2){
-        return v1 / v2;
+    public static double invTrnvr(double cogs, double avgInv){
+        return cogs / avgInv;
     }
     
-    public double recvableTrnvr(double v1, double v2){
-        return v1 / v2;
+    public static double recvableTrnvr(double creditSales, double totalAssets){
+        return creditSales / totalAssets;
     }
     
-    public double debtTtlAssets(double v1, double v2){
-        return v1 / v2;
+    public static double debtTtlAssets(double totalLiab, double totalAssets){
+        return totalLiab / totalAssets;
     }
     
-    public double payoutRATIO(double v1, double v2){
-        return v1 / v2;
+    public static double payoutRATIO(double dividends, double netIncome){
+        return dividends / netIncome;
     }
+    
+    
 }
