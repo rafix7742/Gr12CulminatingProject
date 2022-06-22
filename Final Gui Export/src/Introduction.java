@@ -88,7 +88,7 @@ public class Introduction extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem4);
 
-        jMenuItem1.setText("Frame 2");
+        jMenuItem1.setText("UserInput");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jMenuItem1ActionPerformed(evt);
@@ -96,7 +96,7 @@ public class Introduction extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem1);
 
-        toF3fromF1.setText("Frame 3");
+        toF3fromF1.setText("Leaderboard");
         toF3fromF1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 toF3fromF1ActionPerformed(evt);

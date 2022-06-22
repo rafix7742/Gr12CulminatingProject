@@ -19,7 +19,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Frame 2"/>
+                <Property name="text" type="java.lang.String" value="UserInput"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMenuItem1ActionPerformed"/>
@@ -27,7 +27,7 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="toF3fromF1">
               <Properties>
-                <Property name="text" type="java.lang.String" value="Frame 3"/>
+                <Property name="text" type="java.lang.String" value="Leaderboard"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="toF3fromF1ActionPerformed"/>
