@@ -1,10 +1,6 @@
 
 import java.awt.Component;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutputStream;
 import java.util.ArrayList;
-import java.util.InputMismatchException;
 import javax.swing.JOptionPane;
 
 /*
@@ -110,7 +106,6 @@ public class CompanyInput extends javax.swing.JFrame {
         netIncometxt4 = new javax.swing.JTextField();
         fractionbar14 = new javax.swing.JLabel();
         clearFeildsbtn = new javax.swing.JButton();
-        errorlbl = new javax.swing.JLabel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
@@ -501,8 +496,6 @@ public class CompanyInput extends javax.swing.JFrame {
         });
         Background.add(clearFeildsbtn);
         clearFeildsbtn.setBounds(700, 50, 100, 50);
-        Background.add(errorlbl);
-        errorlbl.setBounds(680, 280, 0, 0);
 
         jMenu1.setText("Go to");
 
@@ -607,8 +600,10 @@ public class CompanyInput extends javax.swing.JFrame {
 
     private void confirmbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmbtnActionPerformed
        
-        
-         boolean Catch = false;
+        new redirect().setVisible(true);
+        this.setVisible(false);
+        confirmbtn.setToolTipText("make sure you check all the ratios! You don't want to remove this after all your hard work!");
+         
          try{
           companyOrganizer.netIncome = Double.parseDouble(netIncometxt.getText());
           companyOrganizer.netSales = Double.parseDouble(netSalestxt.getText());
@@ -625,25 +620,15 @@ public class CompanyInput extends javax.swing.JFrame {
           companyOrganizer.totalAssets = Double.parseDouble(totalAssetstxt.getText());
           companyOrganizer.totalLiab = Double.parseDouble(totalLiabtxt.getText());
           companyOrganizer.dividends = Double.parseDouble(dividendtxt.getText());
-          Catch = false;
+
           
          //netIncometxt4.setText(String.valueOf(s));
          
          
-         }catch(InputMismatchException e){
-             errorlbl.setText(String.valueOf("Please enter valid information"));
-             Catch = true;
+         }catch(Exception e){
+             
          }
-         catch(NumberFormatException e){
-             errorlbl.setText(String.valueOf("Please enter valid information"));
-             Catch = true;
-         }
-         if(Catch == false)
-         {
-        new redirect().setVisible(true);
-        this.setVisible(false);
-        confirmbtn.setToolTipText("make sure you check all the ratios! You don't want to remove this after all your hard work!");
-         }
+        
     }//GEN-LAST:event_confirmbtnActionPerformed
 
     private void avgShareEqttxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_avgShareEqttxtActionPerformed
@@ -793,7 +778,6 @@ public class CompanyInput extends javax.swing.JFrame {
     private javax.swing.JTextField currentLiabtxt2;
     private javax.swing.JTextField dividendtxt;
     private javax.swing.JTextField epstxt;
-    private javax.swing.JLabel errorlbl;
     private javax.swing.JLabel fractionbar1;
     private javax.swing.JLabel fractionbar10;
     private javax.swing.JLabel fractionbar11;
